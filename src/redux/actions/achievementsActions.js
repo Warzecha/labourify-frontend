@@ -2,27 +2,29 @@ import {
     ACHIEVEMENT_LIST_LOADING,
     ACHIEVEMENT_LIST_SUCCESS,
     ACHIEVEMENT_LIST_ERROR,
+    USER_ACHIEVEMENT_LIST_SUCCESS,
 } from '../actions/types';
 import axiosInstance from '../../utils/ApiConnector';
+import {getAccessTokenFromState} from '../../utils/ApiUtils';
 
-export const loadAvailableAchievements = () => (dispatch, getState) => {
+export const loadAllAchievements = () => {
+    return loadUserAchievements();
+};
+
+export const loadUserAchievements = (userId) => (dispatch, getState) => {
     dispatch({type: ACHIEVEMENT_LIST_LOADING});
-
-    const {
-        auth: {
-            accessToken
-        } = {}
-    } = getState();
+    const accessToken = getAccessTokenFromState(getState);
+    const url = userId ? `/users/${userId}/achievements` : '/achievements';
 
     axiosInstance
-        .get(`/achievements`, {
+        .get(url, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
             }
         })
         .then(({data}) =>
             dispatch({
-                type: ACHIEVEMENT_LIST_SUCCESS,
+                type: (userId ? USER_ACHIEVEMENT_LIST_SUCCESS : ACHIEVEMENT_LIST_SUCCESS),
                 payload: data
             })
         )

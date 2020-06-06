@@ -26,20 +26,23 @@ const AchievementComponent = (props) => {
             name,
             description,
             targetScore = 1,
-            image
-        } = {},
-        progress: {
+            image,
             score = 0
-        } = {}
+        } = {},
     } = props;
 
-    const progressString = `${score}/${targetScore}`;
+    const adjustedScore = Math.min(score, targetScore);
+
+    const progressString = `${adjustedScore}/${targetScore}`;
 
     return (
         <div className={styles.container}>
 
             <div className={styles.badgeContainer}>
-                <img src={process.env.REACT_APP_API_URL + image} alt={name} className={styles.badge}/>
+                <img src={process.env.REACT_APP_API_URL + image}
+                     alt={name}
+                     className={styles.badge}
+                     style={{opacity: (score >= targetScore ? 1 : 0.5)}}/>
             </div>
 
             <div className={styles.infoContainer}>
@@ -51,7 +54,7 @@ const AchievementComponent = (props) => {
                     <BorderLinearProgress
                         variant="determinate"
                         // color="secondary"
-                        value={score / targetScore * 100}
+                        value={adjustedScore / targetScore * 100}
                         style={{flex: 1}}
                     />
 

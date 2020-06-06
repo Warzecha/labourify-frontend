@@ -19,7 +19,9 @@ const AccountSettingsComponentView = (props) => {
         githubUsernameField,
         slackUsernameField,
         isLoading,
-        user
+        user,
+        onSave,
+        onCancel
     } = props;
 
     return (
@@ -71,10 +73,18 @@ const AccountSettingsComponentView = (props) => {
                         </div>
 
                         <div className={styles.buttonRow}>
-                            <Button variant={'outlined'} color={'secondary'} className={styles.button}>
+                            <Button onClick={onCancel}
+                                    variant={'outlined'}
+                                    color={'secondary'}
+                                    className={styles.button}
+                            >
                                 Cancel
                             </Button>
-                            <Button variant={'contained'} color={'primary'} className={styles.button}>
+                            <Button onClick={onSave}
+                                    variant={'contained'}
+                                    color={'primary'}
+                                    className={styles.button}
+                            >
                                 Save
                             </Button>
                         </div>

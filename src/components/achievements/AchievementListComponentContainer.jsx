@@ -5,11 +5,11 @@ import AchievementListComponentView from './AchievementListComponentView';
 const AchievementListComponentContainer = () => {
 
     const {
-        allAchievements
+        userAchievements
     } = useSelector(state => state.achievements);
 
     return (
-        <AchievementListComponentView allAchievements={allAchievements}/>
+        <AchievementListComponentView allAchievements={userAchievements}/>
     );
 };
 
