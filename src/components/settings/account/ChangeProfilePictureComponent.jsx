@@ -112,7 +112,8 @@ const ChangeProfilePictureComponent = (props) => {
     };
 
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
         getCroppedImg(imgSrc, pixelCrop)
             .then(pic => {
@@ -121,6 +122,9 @@ const ChangeProfilePictureComponent = (props) => {
 
                 dispatch(modifyProfileAction({image: pic}));
 
+            })
+            .then(() => {
+                setModalOpen(false);
             })
             .catch(e => {
                 console.log(e.message);

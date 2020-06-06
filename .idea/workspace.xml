@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93eda3ea-b2a0-4adf-b73f-71118ffe2415" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/ApiUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/account/AccountSettingsComponentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/account/AccountSettingsComponentView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/settings/account/AccountsSettingsComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/account/AccountsSettingsComponentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/user/UserProfileComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/UserProfileComponentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/achievementsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/achievementsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/feedbackActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/feedbackActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/settingsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/settingsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/achievementsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/achievementsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducers/activeUserReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/activeUserReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/achievements/AchievementComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/achievements/AchievementComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/account/ChangeProfilePictureComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/account/ChangeProfilePictureComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +112,7 @@
       <workItem from="1587566178715" duration="853000" />
       <workItem from="1587713750453" duration="30000" />
       <workItem from="1587744748421" duration="1449000" />
-      <workItem from="1591451637738" duration="4812000" />
+      <workItem from="1591451637738" duration="6291000" />
     </task>
     <servers />
   </component>
@@ -135,29 +124,33 @@
       <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state x="2000" y="25" key="#ESLint/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591460133459" />
-    <state width="1398" height="92" key="GridCell.Tab.0.bottom" timestamp="1587746029235">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="243" key="GridCell.Tab.0.bottom" timestamp="1591461755967">
+      <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305199" />
     <state width="1878" height="366" key="GridCell.Tab.0.bottom/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476749" />
+    <state width="1878" height="243" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591461755967" />
     <state width="1398" height="92" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587746029235" />
-    <state width="1398" height="92" key="GridCell.Tab.0.center" timestamp="1587746029233">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="243" key="GridCell.Tab.0.center" timestamp="1591461755965">
+      <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.center/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305198" />
     <state width="1878" height="366" key="GridCell.Tab.0.center/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476748" />
+    <state width="1878" height="243" key="GridCell.Tab.0.center/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591461755965" />
     <state width="1398" height="92" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587746029233" />
-    <state width="1398" height="92" key="GridCell.Tab.0.left" timestamp="1587746029232">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="243" key="GridCell.Tab.0.left" timestamp="1591461755963">
+      <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.left/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305198" />
     <state width="1878" height="366" key="GridCell.Tab.0.left/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476747" />
+    <state width="1878" height="243" key="GridCell.Tab.0.left/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591461755963" />
     <state width="1398" height="92" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587746029232" />
-    <state width="1398" height="92" key="GridCell.Tab.0.right" timestamp="1587746029234">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1878" height="243" key="GridCell.Tab.0.right" timestamp="1591461755966">
+      <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.right/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305199" />
     <state width="1878" height="366" key="GridCell.Tab.0.right/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476749" />
+    <state width="1878" height="243" key="GridCell.Tab.0.right/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591461755966" />
     <state width="1398" height="92" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587746029234" />
     <state width="1878" height="366" key="GridCell.Tab.1.bottom" timestamp="1584811476752">
       <screen x="-228" y="-1080" width="1920" height="1080" />
