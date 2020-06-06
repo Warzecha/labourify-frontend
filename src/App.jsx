@@ -9,7 +9,7 @@ import TopBar from "./components/generic/TopBar";
 import {useDispatch, useSelector} from 'react-redux';
 import {loadUserAction} from './redux/actions/authActions';
 import {withReduxProvider} from './utils/withReduxProvider';
-import {loadAvailableAchievements} from './redux/actions/achievementsActions';
+import {loadAllAchievements} from './redux/actions/achievementsActions';
 import GlobalStatusSnackbar from './components/generic/feedback/GlobalStatusSnackbar';
 
 
@@ -23,7 +23,7 @@ const App = () => {
     const {accessToken} = useSelector(state => state.auth);
 
     useEffect(() => {
-        dispatch(loadAvailableAchievements());
+        dispatch(loadAllAchievements());
     }, []);
 
     useEffect(() => {

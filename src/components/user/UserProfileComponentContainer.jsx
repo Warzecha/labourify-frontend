@@ -4,6 +4,7 @@ import UserProfileComponentView from "./UserProfileComponentView";
 import {useParams} from "react-router-dom";
 import {useDispatch, useSelector} from 'react-redux';
 import {fetchUserProfileAction} from '../../redux/actions/userProfileActions';
+import {loadUserAchievements} from '../../redux/actions/achievementsActions';
 
 const UserProfileComponentContainer = () => {
 
@@ -14,6 +15,7 @@ const UserProfileComponentContainer = () => {
         useEffect(() => {
             if (id) {
                 dispatch(fetchUserProfileAction(id));
+                dispatch(loadUserAchievements(id));
             }
         }, [id]);
 

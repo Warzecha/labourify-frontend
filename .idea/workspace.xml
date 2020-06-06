@@ -2,76 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93eda3ea-b2a0-4adf-b73f-71118ffe2415" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/damianwarzecha.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/github_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/slack_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/achievements/AchievementComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/CreateAccountFormContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/CreateAccountFormView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/CreateAccountPromptComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/SignInFormContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/auth/SignInFormView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/ActionStatusSnackbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/ProfileMenu.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/SideBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/TopBar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/ValidatedTextInputField.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/feedback/Alert.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/feedback/ErrorAlert.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/generic/feedback/GlobalStatusSnackbar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/account/AccountSettingsComponentView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/account/AccountsSettingsComponentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/account/ChangeProfilePictureComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/integrations/IntegrationSetupComponentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/integrations/IntegrationSetupComponentView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/integrations/IntegrationsListComponentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/settings/integrations/IntegrationsListComponentView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user/UserAvatar.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user/UserInfoItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user/UserProfileComponentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/user/UserProfileComponentView.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/achievementsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/authActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/feedbackActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/settingsActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/actions/userProfileActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/achievementsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/activeUserReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/authReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/feedbackReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducers/userProfileReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/MainNavigation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/PrivateRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/CreateAccountScreenScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/IntegrationSetupScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SettingsScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/SignInScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/UserProfileScreen.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/MainStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/TileStyles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ApiConnector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/AuthValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/DateUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/FieldValidation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/NavigationUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/NumberUtils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/withReduxProvider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/ApiUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labourification-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/labourification-frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/achievements/AchievementListComponentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/account/AccountSettingsComponentView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/account/AccountSettingsComponentView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/settings/account/AccountsSettingsComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/settings/account/AccountsSettingsComponentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/user/UserProfileComponentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/user/UserProfileComponentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/achievementsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/achievementsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/feedbackActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/feedbackActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/settingsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/settingsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/achievementsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/achievementsReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducers/activeUserReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/activeUserReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,10 +39,13 @@
     <property name="js.last.introduce.type" value="CONST" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux/reducers" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -175,7 +122,8 @@
       <workItem from="1586938767041" duration="259000" />
       <workItem from="1587566178715" duration="853000" />
       <workItem from="1587713750453" duration="30000" />
-      <workItem from="1587744748421" duration="1167000" />
+      <workItem from="1587744748421" duration="1449000" />
+      <workItem from="1591451637738" duration="4812000" />
     </task>
     <servers />
   </component>
@@ -183,30 +131,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="237" key="GridCell.Tab.0.bottom" timestamp="1586943305199">
+    <state x="2000" y="25" key="#ESLint" timestamp="1591460133459">
+      <screen x="1440" y="-180" width="1920" height="1080" />
+    </state>
+    <state x="2000" y="25" key="#ESLint/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591460133459" />
+    <state width="1398" height="92" key="GridCell.Tab.0.bottom" timestamp="1587746029235">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305199" />
     <state width="1878" height="366" key="GridCell.Tab.0.bottom/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476749" />
-    <state width="1398" height="237" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586453487059" />
-    <state width="1398" height="237" key="GridCell.Tab.0.center" timestamp="1586943305198">
+    <state width="1398" height="92" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587746029235" />
+    <state width="1398" height="92" key="GridCell.Tab.0.center" timestamp="1587746029233">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.center/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305198" />
     <state width="1878" height="366" key="GridCell.Tab.0.center/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476748" />
-    <state width="1398" height="237" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586453487058" />
-    <state width="1398" height="237" key="GridCell.Tab.0.left" timestamp="1586943305198">
+    <state width="1398" height="92" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587746029233" />
+    <state width="1398" height="92" key="GridCell.Tab.0.left" timestamp="1587746029232">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.left/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305198" />
     <state width="1878" height="366" key="GridCell.Tab.0.left/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476747" />
-    <state width="1398" height="237" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586453487057" />
-    <state width="1398" height="237" key="GridCell.Tab.0.right" timestamp="1586943305199">
+    <state width="1398" height="92" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587746029232" />
+    <state width="1398" height="92" key="GridCell.Tab.0.right" timestamp="1587746029234">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="237" key="GridCell.Tab.0.right/0.0.1440.900/-169.-1080.1920.1080@0.0.1440.900" timestamp="1586943305199" />
     <state width="1878" height="366" key="GridCell.Tab.0.right/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811476749" />
-    <state width="1398" height="237" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586453487059" />
+    <state width="1398" height="92" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587746029234" />
     <state width="1878" height="366" key="GridCell.Tab.1.bottom" timestamp="1584811476752">
       <screen x="-228" y="-1080" width="1920" height="1080" />
     </state>
@@ -259,10 +211,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="208" y="31" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1584793439251" />
-    <state x="378" y="212" width="683" height="476" key="find.popup" timestamp="1586379962023">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="1944" y="74" width="911" height="572" key="find.popup" timestamp="1591452954987">
+      <screen x="1440" y="-180" width="1920" height="1080" />
     </state>
     <state x="276" y="-826" width="911" height="572" key="find.popup/0.0.1440.900/-228.-1080.1920.1080@-228.-1080.1920.1080" timestamp="1584811004717" />
+    <state x="1944" y="74" width="911" height="572" key="find.popup/0.0.1440.900/1440.-180.1920.1080@1440.-180.1920.1080" timestamp="1591452954987" />
     <state x="378" y="212" width="683" height="476" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1586379962023" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1585601375556">
       <screen x="0" y="0" width="1440" height="900" />
@@ -272,5 +225,17 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586108140278" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.jsx</url>
+          <line>25</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
