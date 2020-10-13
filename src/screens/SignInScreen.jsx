@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "@material-ui/core/Card";
 import useTileStyle from "../styles/TileStyles";
-import SignInFormContainer from "../components/auth/SignInFormContainer";
+import SignInFormComponent from "../components/auth/SignInFormComponent";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import useTheme from "@material-ui/core/styles/useTheme";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -31,7 +31,7 @@ const SignInScreen = () => {
                 <Alert severity={'success'} message={'Registration successful! You can log in.'}/>}
 
                 <Card className={styles.card}>
-                    <SignInFormContainer/>
+                    <SignInFormComponent/>
                 </Card>
                 {!didJustRegister && <CreateAccountPromptComponent/>}
             </div>
