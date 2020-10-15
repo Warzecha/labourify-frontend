@@ -3,32 +3,30 @@ import PropTypes from 'prop-types';
 import ErrorAlert from '../../generic/feedback/ErrorAlert';
 import {makeStyles} from '@material-ui/core/styles';
 import OrganizationSettingsListItem from '../../organizations/OrganizationSettingsListItem';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Button from '@material-ui/core/Button';
 
 const UserOrganizationSettingsView = props => {
     const {
         loading,
         error,
-        organizations
+        organizations,
+        onNewClicked
     } = props;
 
     const styles = useStyles();
 
-    const OrganizationTile = (org) => {
-
-        return (
-            <div className={styles.organizationContainer}>
-
-
-            </div>);
-
-
-    };
-
     return (
         <div>
+            <div className={styles.buttonRow}>
+
+                <Button variant={'contained'} color={'primary'} onClick={onNewClicked}>
+                    Create new
+                </Button>
+            </div>
 
             <ErrorAlert error={error}/>
-            {loading && 'Loading'}
+            {loading && <LinearProgress color='secondary'/>}
 
             <div>
                 {
@@ -47,23 +45,12 @@ const UserOrganizationSettingsView = props => {
 
 UserOrganizationSettingsView.propTypes = {};
 
-const useStyles = makeStyles(theme => ({
-    organizationContainer: {
+const useStyles = makeStyles({
+    buttonRow: {
         display: 'flex',
-        width: '100%',
-        height: '100%',
-        padding: 20,
-        borderRadius: 10,
-        border: '1px solid #d1d5da',
-        maxWidth: 80
+        justifyContent: 'flex-end',
+        paddingBottom: 10,
     },
-    badge: {
-        height: '100%',
-        width: 'auto',
-    },
-    nameText: {
-        fontWeight: 'bold'
-    }
-}));
+});
 
 export default UserOrganizationSettingsView;

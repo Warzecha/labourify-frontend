@@ -11,7 +11,6 @@ const OrganizationSettingsListItem = ({organization, userRole}) => {
     const {
         name,
         icon,
-        id,
         memberCount = 0,
         urlSlug
     } = organization;
@@ -43,7 +42,7 @@ const OrganizationSettingsListItem = ({organization, userRole}) => {
                         <PeopleIcon fontSize={'small'} color='disabled'/>
                         <Typography color='textSecondary'
                                     className={styles.iconDataText}>
-                            {`${memberCount} members`}
+                            {`${memberCount} ${memberCount === 1 ? 'member' : 'members'}`}
                         </Typography>
                     </div>
 
@@ -66,6 +65,12 @@ const OrganizationSettingsListItem = ({organization, userRole}) => {
                     View
                 </Button>
 
+                <Button color={'secondary'}
+                        className={styles.button}
+                >
+                    Leave
+                </Button>
+
             </div>
         </div>
     );
@@ -83,7 +88,7 @@ const useStyles = makeStyles({
         padding: 20,
         borderRadius: 10,
         border: '1px solid #d1d5da',
-        margin: 5,
+        marginTop: 10,
         justifyContent: 'space-between',
         alignItems: 'center'
     },
@@ -103,8 +108,7 @@ const useStyles = makeStyles({
     },
     actionsContainer: {
         display: 'flex',
-        flexDirection: 'column',
-        padding: 20
+        flexDirection: 'column'
     },
     iconDataContainer: {
         display: 'flex',

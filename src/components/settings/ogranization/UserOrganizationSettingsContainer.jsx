@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import UserOrganizationSettingsView from './UserOrganizationSettingsView';
 import {withErrorBoundary} from '../../../utils/ErrorUtils';
 import {useSelector} from 'react-redux';
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 const UserOrganizationSettingsContainer = () => {
 
@@ -12,6 +13,11 @@ const UserOrganizationSettingsContainer = () => {
 
     const {user} = useSelector(state => state.activeUser);
 
+    const history = useHistory();
+
+    const handleNewClicked = useCallback(() => {
+        history.push('/settings/organizations/new');
+    }, [history]);
 
     useEffect(() => {
         setLoading(true);
@@ -43,6 +49,7 @@ const UserOrganizationSettingsContainer = () => {
     return (<UserOrganizationSettingsView organizations={organizations}
                                           error={error}
                                           loading={loading}
+                                          onNewClicked={handleNewClicked}
     />);
 };
 
