@@ -9,7 +9,7 @@ import {
     REGISTER_SUCCESS,
     REGISTER_FAIL
 } from './types';
-import axiosInstance from '../../utils/ApiConnector';
+import axios from 'axios';
 
 const registrationErrorActionCreator = (err) => ({type: REGISTER_FAIL, payload: err});
 const registrationSuccessActionCreator = (data) => ({type: REGISTER_SUCCESS, payload: data});
@@ -28,12 +28,11 @@ export const loadUserAction = () => (dispatch, getState) => {
         } = {}
     } = getState();
 
-    axiosInstance
-        .get('/users/me', {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        })
+    axios.get('/users/me', {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
         .then(({data}) =>
             dispatch({
                 type: USER_LOADED,
@@ -50,8 +49,7 @@ export const loadUserAction = () => (dispatch, getState) => {
 };
 
 export const registerAction = (body, history) => dispatch => {
-    axiosInstance
-        .post('/auth/register', body)
+    axios.post('/auth/register', body)
         .then(({data}) => {
             registrationSuccessActionCreator(data);
             history.push('/login?reason=registration');
@@ -65,11 +63,11 @@ export const registerAction = (body, history) => dispatch => {
 export const loginAction = ({email, password}, history) => dispatch => {
     const body = {email, password};
 
-    axiosInstance.post('/auth/login', body)
+    axios.post('/auth/login', body)
         .then(({data}) => {
             console.log('Login successful', data);
             dispatch(loginSuccessActionCreator(data));
-            history.push('/user/me')
+            history.push('/user/me');
         })
         .catch(err => {
             console.error('Login unsuccessful', err.response);
@@ -78,9 +76,9 @@ export const loginAction = ({email, password}, history) => dispatch => {
 };
 
 // Logout User
-export const logout = history =>  dispatch => {
+export const logout = history => dispatch => {
     dispatch(logoutSuccessActionCreator());
-    history.replace('/')
+    history.replace('/');
 };
 
 

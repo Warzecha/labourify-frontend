@@ -3,7 +3,7 @@ import {
     USER_PROFILE_SUCCESS,
     USER_PROFILE_ERROR,
 } from './types';
-import axiosInstance from '../../utils/ApiConnector';
+import axios from 'axios';
 
 export const fetchUserProfileAction = (id) => (dispatch, getState) => {
     dispatch({type: USER_PROFILE_LOADING});
@@ -14,12 +14,11 @@ export const fetchUserProfileAction = (id) => (dispatch, getState) => {
         } = {}
     } = getState();
 
-    axiosInstance
-        .get(`/users/${id}`, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        })
+    axios.get(`/users/${id}`, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
         .then(({data}) =>
             dispatch({
                 type: USER_PROFILE_SUCCESS,

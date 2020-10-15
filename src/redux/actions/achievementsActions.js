@@ -4,7 +4,7 @@ import {
     ACHIEVEMENT_LIST_ERROR,
     USER_ACHIEVEMENT_LIST_SUCCESS,
 } from '../actions/types';
-import axiosInstance from '../../utils/ApiConnector';
+import axios from 'axios';
 import {getAccessTokenFromState} from '../../utils/ApiUtils';
 
 export const loadAllAchievements = () => {
@@ -16,12 +16,11 @@ export const loadUserAchievements = (userId) => (dispatch, getState) => {
     const accessToken = getAccessTokenFromState(getState);
     const url = userId ? `/users/${userId}/achievements` : '/achievements';
 
-    axiosInstance
-        .get(url, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        })
+    axios.get(url, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
         .then(({data}) =>
             dispatch({
                 type: (userId ? USER_ACHIEVEMENT_LIST_SUCCESS : ACHIEVEMENT_LIST_SUCCESS),

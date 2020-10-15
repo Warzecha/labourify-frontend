@@ -3,7 +3,7 @@ import {
     ACCOUNT_SETTINGS_UPDATE_SUCCESS,
     ACCOUNT_SETTINGS_UPDATE_FAILURE,
 } from './types';
-import axiosInstance from '../../utils/ApiConnector';
+import axios from 'axios';
 import {operationErrorAction, operationSuccessAction} from './feedbackActions';
 
 
@@ -20,12 +20,11 @@ export const modifyProfileAction = (updateRequest, userId = 'me') => async (disp
     const body = {...user, ...updateRequest};
 
     console.debug('Sending update user request');
-    axiosInstance
-        .put(`/users/${userId}`, body, {
-            headers: {
-                Authorization: `Bearer ${accessToken}`
-            }
-        })
+    axios.put(`/users/${userId}`, body, {
+        headers: {
+            Authorization: `Bearer ${accessToken}`
+        }
+    })
         .then(({data}) => {
                 console.debug('Saved successfully');
                 dispatch(operationSuccessAction('Successfully saved account settings'));
