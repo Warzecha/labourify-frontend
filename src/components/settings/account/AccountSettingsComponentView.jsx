@@ -31,13 +31,11 @@ const AccountSettingsComponentView = (props) => {
             </Backdrop>
 
             <Grid container spacing={3}>
-                <Grid item xs={12}>
-                    <Typography className={styles.heading}>Account settings</Typography>
-                </Grid>
-
                 <Grid item xs={12} sm={6}>
 
                     <div className={styles.column}>
+                        <Typography className={styles.sectionHeading}>Account settings</Typography>
+
                         <ValidatedTextInputField
                             label="Username"
                             variant="outlined"
@@ -88,11 +86,7 @@ const AccountSettingsComponentView = (props) => {
                                 Save
                             </Button>
                         </div>
-
-
                     </div>
-
-
                 </Grid>
 
                 <Grid item xs={12} sm={6}>
@@ -106,9 +100,6 @@ const AccountSettingsComponentView = (props) => {
 };
 
 const useStyles = makeStyles(theme => ({
-    heading: {
-        fontSize: 24
-    },
     sectionHeading: {
         fontSize: 18,
         color: theme.palette.text.secondary,
@@ -122,11 +113,6 @@ const useStyles = makeStyles(theme => ({
     column: {
         display: 'flex',
         flexDirection: 'column'
-    },
-    centeredColumn: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center'
     },
     iconRow: {
         display: 'flex',

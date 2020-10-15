@@ -11,6 +11,7 @@ import {loadUserAction} from './redux/actions/authActions';
 import {withReduxProvider} from './utils/withReduxProvider';
 import {loadAllAchievements} from './redux/actions/achievementsActions';
 import GlobalStatusSnackbar from './components/generic/feedback/GlobalStatusSnackbar';
+import AxiosProvider from './utils/AxiosProvider';
 
 
 const App = () => {
@@ -24,13 +25,13 @@ const App = () => {
 
     useEffect(() => {
         dispatch(loadAllAchievements());
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         if (accessToken) {
             dispatch(loadUserAction());
         }
-    }, [accessToken]);
+    }, [dispatch, accessToken]);
 
 
     const handleDrawerButton = () => {
@@ -40,6 +41,7 @@ const App = () => {
     return (
         <div className={classes.root}>
             <CssBaseline/>
+            <AxiosProvider/>
             <Router basename={process.env.PUBLIC_URL}>
 
                 <TopBar onDrawerToggle={handleDrawerButton}

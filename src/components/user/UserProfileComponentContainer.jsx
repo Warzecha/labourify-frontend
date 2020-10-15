@@ -17,7 +17,7 @@ const UserProfileComponentContainer = () => {
                 dispatch(fetchUserProfileAction(id));
                 dispatch(loadUserAchievements(id));
             }
-        }, [id]);
+        }, [dispatch, id]);
 
         // const history = useHistory();
 

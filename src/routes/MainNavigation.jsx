@@ -1,20 +1,17 @@
-import React from "react";
+import React from 'react';
 import {
     Switch,
     Route,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import useMainStyle from "../styles/MainStyles";
-import SignInScreen from "../screens/SignInScreen";
-import SettingsScreen from "../screens/SettingsScreen";
-import IntegrationSetupScreen from "../screens/IntegrationSetupScreen";
-import UserProfileScreen from "../screens/UserProfileScreen";
-import CreateAccountFormContainer from '../components/auth/CreateAccountFormContainer';
+import useMainStyle from '../styles/MainStyles';
+import SignInScreen from '../screens/SignInScreen';
+import IntegrationSetupScreen from '../screens/IntegrationSetupScreen';
+import UserProfileScreen from '../screens/UserProfileScreen';
 import CreateAccountScreen from '../screens/CreateAccountScreenScreen';
-import AccountsSettingsComponentContainer from '../components/settings/account/AccountsSettingsComponentContainer';
+import AccountSettingsNavigation from './AccountSettingsNavigation';
 
-
-export default function () {
+const MainNavigation = () => {
     const classes = useMainStyle();
 
     return (
@@ -22,32 +19,30 @@ export default function () {
             <div className={classes.toolbar}/>
             <Switch>
                 {/*{routes}*/}
-                <Route path="/login">
+                <Route path='/login'>
                     <SignInScreen/>
                 </Route>
 
-                <Route path="/register">
+                <Route path='/register'>
                     <CreateAccountScreen/>
                 </Route>
 
-                <Route path="/settings/setup/:name">
-                    <IntegrationSetupScreen/>
+                {/*<Route path='/settings/setup/:name'>*/}
+                {/*    <IntegrationSetupScreen/>*/}
+                {/*</Route>*/}
+
+                <Route path='/settings'>
+                    <AccountSettingsNavigation/>
                 </Route>
 
-                <Route path="/settings/account">
-                    <AccountsSettingsComponentContainer/>
-                </Route>
-
-                <Route path="/settings">
-                    <SettingsScreen/>
-                </Route>
-
-                <Route path="/user/:id">
+                <Route path='/user/:id'>
                     <UserProfileScreen/>
                 </Route>
 
 
             </Switch>
-        </main>)
+        </main>);
+};
 
-}
+export default MainNavigation;
+
