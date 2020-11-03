@@ -1,54 +1,53 @@
-import React, {useEffect} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 
-function useFieldValidation(initialValue, validate = () => null) {
-    const [value, setValue] = React.useState(initialValue);
-    const [errors, setErrors] = React.useState(null);
+const noop = (_) => null;
 
-    useEffect(() => {
-        if (value !== initialValue) {
-            const validationErrors = validate(value);
-            setErrors(validationErrors);
-        }
-    }, [value]);
+const useFieldValidation = (initialValue, validate, onChange = noop) => {
+    const [value, setValue] = useState(initialValue);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         if (value !== initialValue) {
-            const validationErrors = validate(initialValue);
-            setValue(initialValue);
-            setErrors(validationErrors);
+            const validationError = validate(value);
+            setError(validationError);
         }
+    }, [value, validate, initialValue]);
+
+    const handleChange = useCallback((event) => {
+        setValue(event.target.value);
+        onChange(event.target.value);
+    }, [onChange]);
+
+    const handleBlur = useCallback(() => {
+        const validationError = validate(value);
+        setError(validationError);
+    }, [value, validate]);
+
+    const runValidation = useCallback(() => {
+        const validationError = validate(value);
+        setError(validationError);
+        return validationError;
+    }, [value, validate]);
+
+    const resetToInitialValue = useCallback(() => {
+        setValue(initialValue);
     }, [initialValue]);
 
-    function handleChange(event) {
-        setValue(event.target.value);
-    }
-
-    function handleBlur() {
-        const validationErrors = validate(value);
-        setErrors(validationErrors);
-    }
-
-    function runValidation() {
-        const validationErrors = validate(value);
-        setErrors(validationErrors);
-        return validationErrors;
-    }
-
-    function clearValue() {
+    const clearValue = useCallback(() => {
         setValue('');
-    }
-
+    }, []);
 
     return {
         value,
         handleChange,
-        errors,
+        error,
         handleBlur,
+        resetToInitialValue,
         clearValue,
         validate: runValidation,
         setValue
     };
 
-}
+};
 
 export default useFieldValidation;

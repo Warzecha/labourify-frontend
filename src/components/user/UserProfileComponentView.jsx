@@ -8,25 +8,28 @@ import Divider from '@material-ui/core/Divider';
 import AchievementListComponentContainer from '../achievements/AchievementListComponentContainer';
 import Grid from '@material-ui/core/Grid';
 import UserAvatar from './UserAvatar';
+import SimpleOrgListItem from '../organizations/SimpleOrgListItem';
 
 const UserProfileComponentView = (props) => {
 
     const {
         userProfile,
         error,
-        isLoading
+        isLoading,
+
     } = props;
 
     const {
         username,
         email,
+        orgPermissions = []
     } = userProfile || {};
+
 
     const styles = useStyles();
 
-
     return (
-        <Grid container spacing={3}>
+        <Grid container spacing={3} style={{marginTop: 10}}>
 
             <Grid item xs={12} sm={3}>
 
@@ -38,6 +41,12 @@ const UserProfileComponentView = (props) => {
                 <Divider className={styles.divider}/>
 
                 {email && <UserInfoItem icon={<MailOutlineIcon fontSize={'small'}/>} value={email}/>}
+
+                <Divider className={styles.divider}/>
+
+                {
+                    orgPermissions.map(permission => <SimpleOrgListItem organization={permission.organization}/>)
+                }
 
             </Grid>
             <Grid item xs={12} sm={9}>

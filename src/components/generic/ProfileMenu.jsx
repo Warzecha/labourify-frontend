@@ -33,7 +33,7 @@ const ProfileMenu = (props) => {
             }}>Your Profile</MenuItem>
             <MenuItem onClick={() => {
                 onClose();
-                history.push('/settings/account');
+                history.push('/settings/profile');
             }}>Account Settings</MenuItem>
             <MenuItem onClick={() => {
                 onClose();

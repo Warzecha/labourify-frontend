@@ -30,7 +30,8 @@ const useMainStyle = makeStyles(theme => ({
 
     content: {
         flexGrow: 1,
-        padding: theme.spacing(3),
+        paddingLeft: theme.spacing(3),
+        paddingRight: theme.spacing(3),
     },
 
     toolbar: theme.mixins.toolbar,

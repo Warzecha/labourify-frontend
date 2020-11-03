@@ -50,7 +50,7 @@ const TopBar = (props) => {
                         <MenuIcon/>
                     </IconButton>}
                     <Typography variant="h6" noWrap>
-                        Labourification
+                        Labourify
                     </Typography>
 
 

@@ -32,13 +32,14 @@ const useStyles = makeStyles(() => ({
         maxWidth: 200,
         maxHeight: 200,
         borderRadius: 10,
-        border: '1px solid #d1d5da'
     },
     padding: {
         padding: 20,
+        border: '1px solid #d1d5da'
     },
     roundedCorners: {
-        borderRadius: 3,
+        borderRadius: 10,
+        border: '1px solid #d1d5da'
     },
     avatar: {
         width: '100%',
