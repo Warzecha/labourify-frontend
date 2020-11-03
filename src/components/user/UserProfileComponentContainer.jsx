@@ -27,10 +27,15 @@ const UserProfileComponentContainer = () => {
             isLoading
         } = useSelector(state => state.user);
 
+        const {
+            levels
+        } = useSelector(state => state.experience);
+
 
         return <UserProfileComponentView userProfile={userProfile}
                                          error={error}
                                          isLoading={isLoading}
+                                         experienceLevels={levels}
             // onUserSaved={handleUserSaved}
         />;
 

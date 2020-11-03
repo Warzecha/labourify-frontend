@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import AccountSettingsComponentView from './AccountSettingsComponentView';
 import useFieldValidation from '../../../utils/FieldValidation';
@@ -12,19 +12,29 @@ const AccountsSettingsComponentContainer = () => {
         isLoading
     } = useSelector(state => state.activeUser);
 
-    const {
-        username = '',
-        githubAccount = {},
-        slackAccount = {}
-    } = user || {};
-
 
     const dispatch = useDispatch();
 
 
-    const usernameField = useFieldValidation(username, validateUsername);
-    const githubUsernameField = useFieldValidation(githubAccount.username || '');
-    const slackUsernameField = useFieldValidation(slackAccount.username || '');
+    const usernameField = useFieldValidation('', validateUsername);
+    const githubUsernameField = useFieldValidation('', () => null);
+    const slackUsernameField = useFieldValidation('', () => null);
+
+    useEffect(() => {
+
+        if (user) {
+            const {
+                username = '',
+                githubAccount = {},
+                slackAccount = {}
+            } = user || {};
+
+            usernameField.setValue(username);
+            githubUsernameField.setValue(githubAccount.username);
+            slackUsernameField.setValue(slackAccount.username);
+        }
+
+    }, [user]);
 
     const handleSave = () => {
         console.debug('Save user account settings');

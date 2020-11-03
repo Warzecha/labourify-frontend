@@ -9,6 +9,22 @@ import AchievementListComponentContainer from '../achievements/AchievementListCo
 import Grid from '@material-ui/core/Grid';
 import UserAvatar from './UserAvatar';
 import SimpleOrgListItem from '../organizations/SimpleOrgListItem';
+import {lighten, withStyles} from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+
+const NextLevelProgress = withStyles(theme => ({
+    root: {
+        height: 10,
+        borderRadius: 20,
+        backgroundColor: lighten(theme.palette.primary.main, 0.5),
+        marginRight: 10
+    },
+    bar: {
+        borderRadius: 20,
+        backgroundColor: theme.palette.primary.main,
+    },
+}))(LinearProgress);
 
 const UserProfileComponentView = (props) => {
 
@@ -16,15 +32,22 @@ const UserProfileComponentView = (props) => {
         userProfile,
         error,
         isLoading,
-
+        experienceLevels
     } = props;
 
     const {
         username,
         email,
-        orgPermissions = []
+        orgPermissions = [],
+        currentExperiencePoints,
+        experienceLevel,
     } = userProfile || {};
 
+    const progressString = experienceLevels ?
+        `${currentExperiencePoints}/${experienceLevels[experienceLevel + 1]} EXP` :
+        `${currentExperiencePoints}/ - EXP`;
+
+    const nextLevelProgress = experienceLevels ? currentExperiencePoints / experienceLevels[experienceLevel + 1] * 100 : 0;
 
     const styles = useStyles();
 
@@ -38,6 +61,24 @@ const UserProfileComponentView = (props) => {
                     {username}
                 </Typography>
 
+
+                <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <Typography color={'textSecondary'}>Level: </Typography>
+                    <Typography style={{marginLeft: 10}}>{experienceLevel}</Typography>
+                </div>
+
+                <NextLevelProgress
+                    variant='determinate'
+                    value={nextLevelProgress}
+                    style={{flex: 1}}
+                />
+
+                <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <Typography color={'textSecondary'}>Next level: </Typography>
+                    <Typography style={{marginLeft: 10}}>{progressString}</Typography>
+                </div>
+
+
                 <Divider className={styles.divider}/>
 
                 {email && <UserInfoItem icon={<MailOutlineIcon fontSize={'small'}/>} value={email}/>}
@@ -47,6 +88,7 @@ const UserProfileComponentView = (props) => {
                 {
                     orgPermissions.map(permission => <SimpleOrgListItem organization={permission.organization}/>)
                 }
+
 
             </Grid>
             <Grid item xs={12} sm={9}>
