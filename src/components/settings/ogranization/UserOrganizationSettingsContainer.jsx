@@ -16,7 +16,7 @@ const UserOrganizationSettingsContainer = () => {
     const history = useHistory();
 
     const handleNewClicked = useCallback(() => {
-        history.push('/settings/organizations/new');
+        history.push('/organizations/new');
     }, [history]);
 
     useEffect(() => {

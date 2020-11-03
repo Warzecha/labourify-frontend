@@ -10,6 +10,7 @@ import IntegrationSetupScreen from '../screens/IntegrationSetupScreen';
 import UserProfileScreen from '../screens/UserProfileScreen';
 import CreateAccountScreen from '../screens/CreateAccountScreenScreen';
 import AccountSettingsNavigation from './AccountSettingsNavigation';
+import NewOrganizationContainer from '../components/organizations/NewOrganization/NewOrganizationContainer';
 
 const MainNavigation = () => {
     const classes = useMainStyle();
@@ -33,6 +34,10 @@ const MainNavigation = () => {
 
                 <Route path='/settings'>
                     <AccountSettingsNavigation/>
+                </Route>
+
+                <Route path='/organizations/new'>
+                    <NewOrganizationContainer/>
                 </Route>
 
                 <Route path='/user/:id'>

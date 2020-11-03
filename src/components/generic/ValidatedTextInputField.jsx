@@ -3,7 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 
 const ValidatedTextInputField = (props) => {
-    const {field} = props;
+    const {field, variant = 'outlined'} = props;
     return (
         <TextField
             value={field.value}
@@ -11,6 +11,8 @@ const ValidatedTextInputField = (props) => {
             onBlur={field.handleBlur}
             helperText={field.errors || ' '}
             onChange={field.handleChange}
+            variant={variant}
+            style={{flexGrow: 1}}
             {...props}
         />
     );

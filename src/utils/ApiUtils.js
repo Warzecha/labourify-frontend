@@ -7,3 +7,5 @@ export const getAccessTokenFromState = (getState) => {
 
     return accessToken;
 };
+
+export const getAuthorizationHeaders = accessToken => ({'Authorization': `Bearer ${accessToken}`});

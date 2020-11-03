@@ -10,6 +10,8 @@ import AccountsSettingsComponentContainer from '../components/settings/account/A
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import UserOrganizationSettingsContainer from '../components/settings/ogranization/UserOrganizationSettingsContainer';
+import ConnectGitHubAccountComponent
+    from '../components/settings/integrations/ConnectGitHubAccountComponent/ConnectGitHubAccountComponent';
 
 const urlRegexp = /^\/?([\w]+)/;
 
@@ -43,6 +45,15 @@ const AccountSettingsNavigation = () => {
                 <Route path={`${path}/organizations`}>
                     <UserOrganizationSettingsContainer/>
                 </Route>
+
+                <Route path={`${path}/integrations/github`}>
+                    <ConnectGitHubAccountComponent/>
+                </Route>
+
+                <Route path={`${path}/integrations`}>
+                    <AccountsSettingsComponentContainer/>
+                </Route>
+
             </Switch>
         </div>
     );
