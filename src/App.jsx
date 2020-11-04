@@ -12,6 +12,7 @@ import {withReduxProvider} from './utils/withReduxProvider';
 import {loadAllAchievements} from './redux/actions/achievementsActions';
 import GlobalStatusSnackbar from './components/generic/feedback/GlobalStatusSnackbar';
 import AxiosProvider from './utils/AxiosProvider';
+import {fetchExperienceLevels} from './redux/actions/experienceLevelsActions';
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(loadAllAchievements());
+        dispatch(fetchExperienceLevels());
     }, [dispatch]);
 
     useEffect(() => {

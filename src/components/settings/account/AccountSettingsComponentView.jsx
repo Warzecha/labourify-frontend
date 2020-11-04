@@ -37,8 +37,8 @@ const AccountSettingsComponentView = (props) => {
                         <Typography className={styles.sectionHeading}>Account settings</Typography>
 
                         <ValidatedTextInputField
-                            label="Username"
-                            variant="outlined"
+                            label='Username'
+                            variant='outlined'
                             field={usernameField}
                             className={styles.formElement}
                         />
@@ -53,8 +53,8 @@ const AccountSettingsComponentView = (props) => {
                         <div className={styles.iconRow}>
                             <Avatar alt={'GitHub'} src={require('../../../assets/images/github_logo.png')}/>
                             <ValidatedTextInputField
-                                label="GitHub username"
-                                variant="outlined"
+                                label='GitHub username'
+                                variant='outlined'
                                 field={githubUsernameField}
                                 className={classNames(styles.formElement, styles.iconTextInput)}
                             />
@@ -63,8 +63,8 @@ const AccountSettingsComponentView = (props) => {
                         <div className={styles.iconRow}>
                             <Avatar alt={'Slack'} src={require('../../../assets/images/slack_logo.png')}/>
                             <ValidatedTextInputField
-                                label="Slack username"
-                                variant="outlined"
+                                label='Slack username'
+                                variant='outlined'
                                 field={slackUsernameField}
                                 className={classNames(styles.formElement, styles.iconTextInput)}
                             />

@@ -27,6 +27,7 @@ const SignInFormComponent = () => {
     const error = useSelector(state => state.auth.error);
 
     const handleSubmit = async (event) => {
+        console.log('Login button clicked');
         event.preventDefault();
         const usernameErrors = emailField.validate();
         const passwordErrors = passwordField.validate();

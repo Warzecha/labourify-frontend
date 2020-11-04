@@ -7,9 +7,9 @@ const ValidatedTextInputField = (props) => {
     return (
         <TextField
             value={field.value}
-            error={!!field.errors}
+            error={!!field.error}
             onBlur={field.handleBlur}
-            helperText={field.errors || ' '}
+            helperText={field.error || ' '}
             onChange={field.handleChange}
             variant={variant}
             style={{flexGrow: 1}}
