@@ -20,7 +20,7 @@ export const modifyProfileAction = (updateRequest, userId = 'me') => async (disp
     const body = {...user, ...updateRequest};
 
     console.debug('Sending update user request');
-    axios.put(`/users/${userId}`, body, {
+    axios.patch(`/users/${userId}`, body, {
         headers: {
             Authorization: `Bearer ${accessToken}`
         }

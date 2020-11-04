@@ -30,8 +30,8 @@ const AccountsSettingsComponentContainer = () => {
             } = user || {};
 
             usernameField.setValue(username);
-            githubUsernameField.setValue(githubAccount.username);
-            slackUsernameField.setValue(slackAccount.username);
+            githubUsernameField.setValue(githubAccount.username || '');
+            slackUsernameField.setValue(slackAccount.username || '');
         }
 
     }, [user]);
